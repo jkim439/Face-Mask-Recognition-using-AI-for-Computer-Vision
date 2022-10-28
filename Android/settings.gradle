@@ -1,0 +1,2 @@
+include ':app' ,':tensorflow-lite', ':lib_interpreter', ':lib_task_api'
+rootProject.name = 'Junghwan Kim - Face Mask Monitoring Application'

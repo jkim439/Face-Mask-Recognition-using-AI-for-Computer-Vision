@@ -1,0 +1,73 @@
+/Users/jkim/Classes/MSC/Project/TensorFlow/venv/bin/python /Users/jkim/Classes/MSC/Project/TensorFlow/main.py
+2.4.1
+1376
+Found 1376 files belonging to 2 classes.
+Using 1101 files for training.
+2021-04-06 16:51:44.984619: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-04-06 16:51:44.984882: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Found 1376 files belonging to 2 classes.
+Using 275 files for validation.
+['with_mask', 'without_mask']
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+rescaling (Rescaling)        (None, 180, 180, 3)       0
+_________________________________________________________________
+conv2d (Conv2D)              (None, 180, 180, 16)      448
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 90, 90, 16)        0
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 90, 90, 32)        4640
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 45, 45, 32)        0
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 45, 45, 64)        18496
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 22, 22, 64)        0
+_________________________________________________________________
+flatten (Flatten)            (None, 30976)             0
+_________________________________________________________________
+dense (Dense)                (None, 128)               3965056
+_________________________________________________________________
+dense_1 (Dense)              (None, 2)                 258
+=================================================================
+Total params: 3,988,898
+Trainable params: 3,988,898
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/15
+2021-04-06 16:51:45.407063: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+101/101 [==============================] - 16s 155ms/step - loss: 0.5845 - accuracy: 0.7573 - val_loss: 0.1897 - val_accuracy: 0.9382
+Epoch 2/15
+101/101 [==============================] - 15s 151ms/step - loss: 0.1211 - accuracy: 0.9566 - val_loss: 0.2500 - val_accuracy: 0.9127
+Epoch 3/15
+101/101 [==============================] - 15s 152ms/step - loss: 0.1123 - accuracy: 0.9596 - val_loss: 0.0987 - val_accuracy: 0.9673
+Epoch 4/15
+101/101 [==============================] - 15s 144ms/step - loss: 0.0466 - accuracy: 0.9876 - val_loss: 0.1378 - val_accuracy: 0.9636
+Epoch 5/15
+101/101 [==============================] - 15s 152ms/step - loss: 0.0231 - accuracy: 0.9932 - val_loss: 0.1780 - val_accuracy: 0.9564
+Epoch 6/15
+101/101 [==============================] - 15s 145ms/step - loss: 0.0359 - accuracy: 0.9891 - val_loss: 0.1408 - val_accuracy: 0.9636
+Epoch 7/15
+101/101 [==============================] - 15s 143ms/step - loss: 0.0640 - accuracy: 0.9737 - val_loss: 0.1865 - val_accuracy: 0.9564
+Epoch 8/15
+101/101 [==============================] - 16s 156ms/step - loss: 0.0090 - accuracy: 0.9991 - val_loss: 0.2420 - val_accuracy: 0.9564
+Epoch 9/15
+101/101 [==============================] - 15s 146ms/step - loss: 0.0095 - accuracy: 0.9980 - val_loss: 0.2943 - val_accuracy: 0.9527
+Epoch 10/15
+101/101 [==============================] - 15s 145ms/step - loss: 0.0190 - accuracy: 0.9961 - val_loss: 0.2233 - val_accuracy: 0.9600
+Epoch 11/15
+101/101 [==============================] - 15s 149ms/step - loss: 0.0099 - accuracy: 0.9977 - val_loss: 0.2769 - val_accuracy: 0.9527
+Epoch 12/15
+101/101 [==============================] - 16s 153ms/step - loss: 0.0050 - accuracy: 0.9978 - val_loss: 0.2929 - val_accuracy: 0.9564
+Epoch 13/15
+101/101 [==============================] - 16s 154ms/step - loss: 0.0016 - accuracy: 1.0000 - val_loss: 0.2775 - val_accuracy: 0.9564
+Epoch 14/15
+101/101 [==============================] - 16s 158ms/step - loss: 0.0010 - accuracy: 1.0000 - val_loss: 0.2990 - val_accuracy: 0.9564
+Epoch 15/15
+101/101 [==============================] - 16s 153ms/step - loss: 0.0013 - accuracy: 1.0000 - val_loss: 0.3112 - val_accuracy: 0.9564
+2021-04-06 16:55:35.153433: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+
+Process finished with exit code 0
